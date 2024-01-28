@@ -74,7 +74,7 @@ def prediction_submission_MC_Row(final_df,timestamp,prompt_number):
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column','Row', 'Link'])
   
 
-    csv_file_path = f'../../evaluation/prediction_submissions/ToughTables/2T_row_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'evaluation/prediction_submissions/ToughTables/2T_row_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -97,7 +97,7 @@ def prediction_submission_Comma_Row(final_df,timestamp,prompt_number):
     prediction_df = pd.DataFrame(predictions, columns=['Dataset','Column','Row', 'Link'])
   
 
-    csv_file_path = f'../../evaluation/prediction_submissions/ToughTables/2T_row_comma_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'evaluation/prediction_submissions/ToughTables/2T_row_comma_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -118,7 +118,7 @@ def prediction_submission_MC_Cell(final_df,timestamp,prompt_number):
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column', 'Row','Link'])
   
 
-    csv_file_path = f'../../evaluation/prediction_submissions/ToughTables/2T_cell_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'evaluation/prediction_submissions/ToughTables/2T_cell_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -141,7 +141,7 @@ def prediction_submission_Comma_Cell(final_df,timestamp,prompt_number):
     prediction_df = pd.DataFrame(predictions, columns=['Dataset','Column','Row', 'Link'])
   
 
-    csv_file_path = f'../../evaluation/prediction_submissions/ToughTables/2T_cell_comma_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'evaluation/prediction_submissions/ToughTables/2T_cell_comma_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
