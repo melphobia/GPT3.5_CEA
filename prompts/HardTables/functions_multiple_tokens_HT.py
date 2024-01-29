@@ -67,13 +67,13 @@ def prediction_submission_MC_Row(final_df,timestamp,prompt_number):
         row_value = row['row'] if row['row'] is not None else "NIL"
         link = row['link'] if row['link'] is not None else "NIL"
 
-        prediction = [dataset, row_value, column, link]
+        prediction = [dataset, column,row_value, link]
         predictions.append(prediction)
     
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column','Row', 'Link'])
   
 
-    csv_file_path = f'evaluation/prediction_submissions/HardTables/HT_row_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'../evaluation/prediction_submissions/HardTables/HT_row_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -89,13 +89,13 @@ def prediction_submission_Comma_Row(final_df,timestamp,prompt_number):
         row_value = row['row'] if row['row'] is not None else "NIL"
         link = row['link'] if row['link'] is not None else "NIL"
 
-        prediction = [dataset, row_value, column, link]
+        prediction = [dataset, column,row_value, link]
         predictions.append(prediction)
     
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column','Row', 'Link'])
   
 
-    csv_file_path = f'evaluation/prediction_submissions/HardTables/HT_row_comma_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'../evaluation/prediction_submissions/HardTables/HT_row_comma_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -111,13 +111,13 @@ def prediction_submission_MC_Cell(final_df,timestamp,prompt_number):
         row_value = row['row'] if row['row'] is not None else "NIL"
         link = row['link'] if row['link'] is not None else "NIL"
 
-        prediction = [dataset, row_value, column, link]
+        prediction = [dataset, column,row_value, link]
         predictions.append(prediction)
     
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column', 'Row', 'Link'])
   
 
-    csv_file_path = f'evaluation/prediction_submissions/HardTables/HT_cell_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'../evaluation/prediction_submissions/HardTables/HT_cell_multiple_choice_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
@@ -133,13 +133,13 @@ def prediction_submission_Comma_Cell(final_df,timestamp,prompt_number):
         row_value = row['row'] if row['row'] is not None else "NIL"
         link = row['link'] if row['link'] is not None else "NIL"
 
-        prediction = [dataset, row_value, column, link]
+        prediction = [dataset, column,row_value, link]
         predictions.append(prediction)
     
     prediction_df = pd.DataFrame(predictions, columns=['Dataset', 'Column','Row', 'Link'])
   
 
-    csv_file_path = f'evaluation/prediction_submissions/HardTables/HT_cell_comma_prompt_{prompt_number}_{timestamp}.csv'
+    csv_file_path = f'../evaluation/prediction_submissions/HardTables/HT_cell_comma_prompt_{prompt_number}_{timestamp}.csv'
     os.makedirs(os.path.dirname(csv_file_path), exist_ok=True)
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
